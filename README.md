@@ -34,5 +34,34 @@ make sure to config this project with your database connection information.. you
 4. once all dependeciens are install from terminal run the command ``npm run dbsetup`` this will popluate the tables on your database and insert the required data from the xlsx file.
 5. to run the application you can either run the command from terminal ``npm run dev`` or ``npm run start``
 
-### enpoints:
+### Endpoints:
 
+* Base url
+
+	``localhost:3000`` this will only apply if running in development
+    
+    
+    
+ 
+ ##### Details:
+ this will return the whole list of employee along with its position and deparment
+ 
+ * URL
+ 
+ 	``/api/directory/list``
+    
+ * Method
+ 	
+   ``GET``
+ 
+ ##### Details:
+ this will return a single entry or sigle record base on the number provided which represent the id of that record
+ 
+  * URL
+ 
+ 	``/api/directory/1``
+    
+ * Method
+ 	
+   ``GET``
+ 
