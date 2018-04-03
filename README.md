@@ -8,6 +8,23 @@ Get NodeJS from [here](https://nodejs.org/en/)
 
 You can also get mysql server from [here](https://www.mysql.com/downloads/)
 
+#### before start:
+make sure to config this project with your database connection information.. you can modify this in the project config.js file 
+
+````
+ dbconfig: {
+      database: process.env.DB_NAME || 'YOUR_DB_NAME',
+      username: process.env.DB_USER || 'YOUR_DB_USER',
+      password: process.env.DB_PASS || "YOUR_DB_PASS",
+      dialect: 'mysql',
+      pool: {
+        max: 10,
+        min: 0,
+        idle: 10000
+      }
+    },
+````
+
 ###### Steps to run:
 
 1. Open up a terminal in your prefered os and run the command `` git clone https://github.com/chris0715/directorio_contacto_backend.git ``
@@ -18,3 +35,4 @@ You can also get mysql server from [here](https://www.mysql.com/downloads/)
 5. to run the application you can either run the command from terminal ``npm run dev`` or ``npm run start``
 
 ### enpoints:
+
