@@ -4,11 +4,16 @@ const path = require('path')
 const config = require('./config')
 const models = require('./models')
 
+if (process.env.NODE_ENV != 'production') {
+  const cors = require('cors')
+  app.use(cors())
+}
+
 app.get('/api/directory/list', (req, res) => {
   const defaultOptions = {
     include: { all: true }
   }
-  models.employeeModel.findAll(defaultOptions)
+  models.employeeModel.findAndCountAll(defaultOptions)
   .then(result => {
     res.status(200).send(result)
   })
